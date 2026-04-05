@@ -1,4 +1,13 @@
 import { useState } from 'react';
+import {
+  KeyIcon,
+  MagnifyingGlassIcon,
+  CurrencyDollarIcon,
+  Cog6ToothIcon,
+  ArrowLeftIcon,
+  PhoneIcon,
+  ArrowRightIcon
+} from '@heroicons/react/24/outline';
 import './App.css';
 
 // Base de datos de códigos USSD (Se añade BPA con ID '01')
@@ -123,10 +132,10 @@ function App() {
   const [showRegister, setShowRegister] = useState(false);
 
   const tabs = [
-    { id: 'SESS', label: 'Sesión', icon: '🔑' },
-    { id: 'CONS', label: 'Consultas', icon: '🔍' },
-    { id: 'OPER', label: 'Operaciones', icon: '💸' },
-    { id: 'CONF', label: 'Configurar', icon: '⚙️' }
+    { id: 'SESS', label: 'Sesión', icon: KeyIcon },
+    { id: 'CONS', label: 'Consultas', icon: MagnifyingGlassIcon },
+    { id: 'OPER', label: 'Operaciones', icon: CurrencyDollarIcon },
+    { id: 'CONF', label: 'Configurar', icon: Cog6ToothIcon }
   ];
 
   // Convierte el # en %23 para que funcione el enlace tel: en iOS
@@ -192,7 +201,9 @@ function App() {
   return (
     <div className="app-container">
       <div className="header">
-        <button className="back-btn" onClick={() => setSelectedBank(null)}>←</button>
+        <button className="back-btn" onClick={() => setSelectedBank(null)}>
+          <ArrowLeftIcon className="back-icon" />
+        </button>
         <h1>{selectedBank}</h1>
       </div>
 
@@ -203,7 +214,7 @@ function App() {
             className={`tab ${activeTab === tab.id ? 'active' : ''}`}
             onClick={() => setActiveTab(tab.id)}
           >
-            <span>{tab.icon}</span>
+            <tab.icon className="tab-icon" />
             <span className="tab-label">{tab.label}</span>
           </button>
         ))}
@@ -214,7 +225,7 @@ function App() {
           item.code === 'REGISTRO' ? (
             <button key={index} className="menu-item" onClick={() => setShowRegister(true)}>
               {item.name}
-              <span className="arrow">→</span>
+              <ArrowRightIcon className="arrow-icon" />
             </button>
           ) : (
             <a 
@@ -223,7 +234,7 @@ function App() {
               className="menu-item"
             >
               {item.name}
-              <span className="arrow">📞</span>
+              <PhoneIcon className="arrow-icon" />
             </a>
           )
         ))}
