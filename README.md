@@ -2,7 +2,7 @@
 
 **Acceso rápido a servicios de banca móvil cubana via USSD**
 
-🔗 **URL**: https://transfermovilweb.vercel.app
+🔗 **URL**: <a href="https://transfermovilweb.vercel.app" target="_blank">https://transfermovilweb.vercel.app</a>
 
 ---
 
