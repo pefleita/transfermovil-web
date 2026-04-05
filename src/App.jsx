@@ -153,13 +153,13 @@ function App() {
         <div className="bank-selector">
           <h2>Seleccione su Banco</h2>
           <button className="bank-btn bpa" onClick={() => setSelectedBank('BPA')}>
-            <span className="bank-logo">🟩</span> BPA
+            <span className="bank-logo"><img src="/bpa-logo.png" alt="BPA" /></span> Banco Popular de Ahorro
           </button>
           <button className="bank-btn bandec" onClick={() => setSelectedBank('BANDEC')}>
-            <span className="bank-logo">🟥</span> BANDEC
+            <span className="bank-logo"><img src="/bandec-logo.png" alt="BANDEC" /></span> BANDEC
           </button>
           <button className="bank-btn banmet" onClick={() => setSelectedBank('BANMET')}>
-            <span className="bank-logo">🟦</span> BANMET
+            <span className="bank-logo"><img src="banmet-logo.png" alt="BANMET" /></span> Banco Metropolitano
           </button>
         </div>
       </div>
