@@ -201,3 +201,12 @@ body {
 
 .cancel { background-color: #eee; color: #333; }
 .confirm { background-color: var(--primary); color: var(--white); }
+
+@media (min-width: 481px) {
+  .app-container {
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    margin: 20px auto;
+    min-height: calc(100vh - 40px);
+  }
+}
