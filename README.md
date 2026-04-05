@@ -1,16 +1,60 @@
-# React + Vite
+# TransferWeb
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Acceso rápido a servicios de banca móvil cubana via USSD**
 
-Currently, two official plugins are available:
+🔗 **URL**: https://transfermovilweb.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ¿Qué es?
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+TransferWeb es una aplicación web que regroupa todos los códigos USSD de los principales bancos cubanos (BPA, BANDEC, BANMET) en una interfaz móvil intuitiva. Evita tener que memorizar los códigos `*444*...#` para acceder a servicios de banca móvil.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Cómo usar
+
+1. Abre la URL en tu navegador móvil
+2. Selecciona tu banco (BPA, BANDEC o BANMET)
+3. Navega por las categorías:
+   - **Sesión**: Autenticarse, desconectar
+   - **Consultas**: Saldo, últimas operaciones, límites
+   - **Operaciones**: Transferencias, pagos de servicios, recargas
+   - **Configuración**: Registro, cambio de PIN
+4. Toca cualquier operación para ejecutar automáticamente el código USSD
+
+---
+
+## Pros y Contras (iPhone)
+
+### ✅ Pros
+
+- **Interfaz intuitiva**: No necesitas recordar códigos
+- **Acceso rápido**: Un toque para ejecutar cualquier operación
+- **Sin instalación**: Funciona directamente en el navegador
+- **Diseño responsive**: Se adapta perfectamente a pantallas de iPhone
+- **Soporte para notch**: Compatible con iPhone X y modelos posteriores
+
+### ❌ Contras
+
+- **Abre la app de Teléfono**: Al tocar una operación, se abre la app nativa de teléfono para ejecutar el código USSD
+- **Funcionamiento limitado**: Requiere que tu línea telefónica tenga activo el servicio de banca móvil USSD
+- **No funciona en WiFi**: Necesitas conexión móvil (datos o voz) para ejecutar los códigos
+- **iOS no permite ejecución directa**: No es posible ejecutar códigos USSD sin abrir el marcador de teléfono (limitación de Apple)
+
+---
+
+## Compatibilidad
+
+- **iOS**: Safari (iPhone)
+- **Android**: Chrome, Firefox, Samsung Internet
+- **Navegadores de escritorio**: Solo visualización (no permite ejecutar códigos USSD)
+
+---
+
+## Tecnologías
+
+- React 19
+- Vite
+- CSS3 (diseño mobile-first, responsive)
+- PWA ready
