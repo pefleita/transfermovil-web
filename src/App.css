@@ -38,6 +38,12 @@ body {
   text-align: center;
   position: relative;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
 }
 
 .header h1 {
@@ -99,9 +105,9 @@ body {
 }
 
 .bank-btn:active { transform: scale(0.98); }
-.bandec { background-color: #d32f2f; }
-.banmet { background-color: #1976d2; }
-.bpa { background-color: #2e7d32; }
+.bandec { background-color: #aa3142; }
+.banmet { background-color: #6fba3e; }
+.bpa { background-color: #006156; }
 
 /* Tabs de Navegación */
 .tabs {
@@ -125,9 +131,13 @@ body {
 }
 
 .tab.active {
-  color: var(--primary);
-  border-bottom-color: var(--primary);
+  color: var(--bank-color, var(--primary));
+  border-bottom-color: var(--bank-color, var(--primary));
   font-weight: bold;
+}
+
+.tab.active .tab-icon {
+  color: var(--bank-color, var(--primary));
 }
 
 .tab-label { margin-top: 4px; }

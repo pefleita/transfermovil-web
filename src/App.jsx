@@ -131,6 +131,12 @@ function App() {
   const [registerInput, setRegisterInput] = useState('');
   const [showRegister, setShowRegister] = useState(false);
 
+  const bankColors = {
+    BPA: '#006156',
+    BANDEC: '#aa3142',
+    BANMET: '#6fba3e'
+  };
+
   const tabs = [
     { id: 'SESS', label: 'Sesión', icon: KeyIcon },
     { id: 'CONS', label: 'Consultas', icon: MagnifyingGlassIcon },
@@ -156,8 +162,11 @@ function App() {
     return (
       <div className="app-container">
         <div className="header">
-          <h1>TransferWeb</h1>
-          <p>Acceso USSD Rápido</p>
+          <img src="/transfermovil-logo.png" alt="Transfermovil Web" width={64} className="transfermovil-logo" />
+          <div>
+            <h1>TransferWeb</h1>
+            <p>Acceso USSD Rápido</p>
+          </div>
         </div>
         <div className="bank-selector">
           <h2>Seleccione su Banco</h2>
@@ -200,14 +209,14 @@ function App() {
 
   return (
     <div className="app-container">
-      <div className="header">
+      <div className="header" style={{ backgroundColor: bankColors[selectedBank] }}>
         <button className="back-btn" onClick={() => setSelectedBank(null)}>
           <ArrowLeftIcon className="back-icon" />
         </button>
         <h1>{selectedBank}</h1>
       </div>
 
-      <div className="tabs">
+      <div className="tabs" style={{ '--bank-color': bankColors[selectedBank] }}>
         {tabs.map(tab => (
           <button 
             key={tab.id} 
