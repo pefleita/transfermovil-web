@@ -170,13 +170,13 @@ function App() {
         </div>
         <div className="bank-selector">
           <h2>Seleccione su Banco</h2>
-          <button className="bank-btn bpa" onClick={() => setSelectedBank('BPA')}>
+          <button className="bank-btn bpa" onClick={() => { setSelectedBank('BPA'); setActiveTab('SESS'); }}>
             <span className="bank-logo"><img src="/bpa-logo.png" alt="BPA" /></span> Banco Popular de Ahorro
           </button>
-          <button className="bank-btn bandec" onClick={() => setSelectedBank('BANDEC')}>
+          <button className="bank-btn bandec" onClick={() => { setSelectedBank('BANDEC'); setActiveTab('SESS'); }}>
             <span className="bank-logo"><img src="/bandec-logo.png" alt="BANDEC" /></span> BANDEC
           </button>
-          <button className="bank-btn banmet" onClick={() => setSelectedBank('BANMET')}>
+          <button className="bank-btn banmet" onClick={() => { setSelectedBank('BANMET'); setActiveTab('SESS'); }}>
             <span className="bank-logo"><img src="banmet-logo.png" alt="BANMET" /></span> Banco Metropolitano
           </button>
         </div>
